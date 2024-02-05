@@ -13,6 +13,7 @@
             - "node.role==worker"
         args: 
           - "--with-registry-auth"
-          - "-p 8001:80"
+          - "-p"
+          - "8001:80"
 
         image: "nginx:latest"
