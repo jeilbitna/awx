@@ -11,5 +11,9 @@
         placement:
           constraints:
             - "node.role==worker"
-        args: "--with-registry-auth -p 8001:80"
+        env: 
+          - "WITH_REGISTRY_AUTH=true"
+          - "PUBLISHED_PORT=8001" 
+          - "TARGET_PORT=80"
+
         image: "nginx:latest"
